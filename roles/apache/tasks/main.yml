@@ -1,0 +1,13 @@
+- name: Install apache (Ubuntu)
+  apt:
+    name:
+      - apache2
+    state: latest
+  when: ansible_distribution == "Ubuntu"
+
+- name: install apache (CentOS)
+  dnf:
+    name:
+      - httpd
+    state: latest
+  when: ansible_distribution == "CentOS"

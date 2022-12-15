@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  roles:
+    - nagios
+
+- hosts: all
+  become: true
+  roles:
+    - apache
